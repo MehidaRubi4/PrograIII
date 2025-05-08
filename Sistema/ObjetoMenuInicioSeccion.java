@@ -9,7 +9,7 @@ public class ObjetoMenuInicioSeccion {
 
 
     public void ChatTexto (){
-        ObjetoMenuTickets seleccion = ObjetoMenuTickets();
+        ObjetoMenuTickets seleccion = new ObjetoMenuTickets();
         Scanner opcionMuevoMenu =  new Scanner(System.in);
         int confirmacion; 
         
@@ -25,16 +25,18 @@ public class ObjetoMenuInicioSeccion {
             System.out.print("Por favor ingrese el numero de la opcion que desea solucinar: ");
             menuNuevo = opcionMuevoMenu.nextInt();
             do {
-                switch (menuNuevou) {
+                switch (menuNuevo) {
                     case 1 ->{
                         System.out.print("5011");
                         seleccion.recuperacion();
                         break;
                     }
                     case 2 ->{
+                        seleccion.instalación();
                         break;
                     }
                     case 3 -> {
+                        seleccion.administrativa();
                         break;
                     }
                     default ->{
