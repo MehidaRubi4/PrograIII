@@ -11,7 +11,7 @@ public class Tickets {
         System.out.println("······ Bienvenido a <Nombre de la empresa> ······ ");
         System.out.println("        Menu de inicio de seccion       ");
         System.out.println("1 --> Por Correo electronico");
-        System.out.println("2 --> Chatde texto");
+        System.out.println("2 --> Chat de texto");
         System.out.println("3 --> Salir.");
 
         System.out.print("Por favor ingrese el numero que desee realizar: ");
@@ -23,6 +23,7 @@ public class Tickets {
                     break;
                 }
                 case 2 -> {
+                    System.out.print("5023");
                     seleccion.ChatTexto();
                     break;
                 }
