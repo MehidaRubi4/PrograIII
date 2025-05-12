@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ObjetoMenuInicioSeccion {
     // PARTE QUE TRANAJA JOEL
     public void CorreoElectronico(){
-        System.out.println("<Colocar los comandos para el inicio de secion por correo electronico");
+        System.out.println("Colocar los comandos para el inicio de secion por correo electronico");
     }
     // Parte que trabaja Rubi
 

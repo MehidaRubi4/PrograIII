@@ -8,7 +8,8 @@ public class Tickets {
         int opcion;
 
         //Menu de los dos tipos de inicio de seccion
-        System.out.println("······ Bienvenido a <Nombre de la empresa> ······ ");
+        System.out.println("······ Bienvenido a Carmesi DigitalTech ······ ");
+        System.out.println("----------------------------------------------- ");
         System.out.println("        Menu de inicio de seccion       ");
         System.out.println("1 --> Por Correo electronico");
         System.out.println("2 --> Chat de texto");

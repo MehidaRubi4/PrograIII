@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// Menu de chat de texto
 public class ObjetoMenuTickets {
     public void recuperacion(){
         Scanner automatico = new Scanner(System.in);

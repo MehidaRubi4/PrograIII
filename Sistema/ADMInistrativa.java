@@ -1,3 +1,4 @@
+// PARTE QUE PERTENECE A CHAT DE TEXTO
 import java.util.Scanner;
 
 public class ADMInistrativa {
