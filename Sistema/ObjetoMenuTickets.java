@@ -55,7 +55,7 @@ public class ObjetoMenuTickets {
                     break;
                 }
                 case 4 ->{
-                    System.out.println("Tenga un feliz dia.");
+                    System.out.println("Regresando al menu de tickets...");
                     break;
                 }
                 default -> {
@@ -95,7 +95,7 @@ public class ObjetoMenuTickets {
                         break;
                     }
                     case 3 ->{
-                        System.out.println("Tenga un feliz dia");
+                        System.out.println("Regresando al menu de tickets..");
                         break;
                     }
                     default -> {

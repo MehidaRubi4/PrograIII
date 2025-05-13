@@ -26,6 +26,8 @@ public class Tickets {
                     break;
                 }
                 case 2 -> {
+                    System.out.println("5015");
+                    System.out.println("");
                     seleccion.ChatTexto();
                     break;
                 }
