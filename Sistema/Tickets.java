@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Tickets {
+    
     public static void main(String[] args) {
         // Inicio de seccion
         ObjetoMenuInicioSeccion seleccion = new ObjetoMenuInicioSeccion();
