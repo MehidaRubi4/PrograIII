@@ -8,6 +8,7 @@ public class Impresora {
         System.out.println("Ingrese el numero que se le porporciono para confimar la opcion que desea realizar");
         confirmacion =  automatico.nextInt();
         if(confirmacion == 2001){
+            System.out.println("");
            // Eperando la respuesta autmatica de los compañeros
         }else{
             System.out.println("Numero no corresponde al procedimeinto que se desea realizar");
@@ -21,6 +22,7 @@ public class Impresora {
         System.out.println("Ingrese el numero que se le porporciono para confimar la opcion que desea realizar");
         confirmacion =  automatico.nextInt();
         if(confirmacion == 2015){
+            System.out.println("");
             // Eperando la respuesta autmatica de los compañeros
         }else{
             System.out.println("Numero no corresponde al procedimeinto que se desea realizar");
@@ -33,6 +35,7 @@ public class Impresora {
         System.out.println("Ingrese el numero que se le porporciono para confimar la opcion que desea realizar");
         confirmacion =  automatico.nextInt();
         if(confirmacion == 2018){
+            System.out.println("");
            // Eperando la respuesta autmatica de los compañeros
         }else{
             System.out.println("Numero no corresponde al procedimeinto que se desea realizar");

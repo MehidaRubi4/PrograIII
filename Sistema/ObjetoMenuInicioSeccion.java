@@ -10,42 +10,44 @@ public class ObjetoMenuInicioSeccion {
 
     public void ChatTexto (){
         ObjetoMenuTickets seleccion = new ObjetoMenuTickets();
-        Scanner opcionMuevoMenu =  new Scanner(System.in);
-        int confirmacion; 
+        Scanner opcionMuevoMenu =  new Scanner(System.in); 
+        int menuNuevo;
         
-        System.out.println("Ingrese el numero que le porporciono para confimar la opcion que desea realizar");
-        confirmacion =  opcionMuevoMenu.nextInt();
-        if(confirmacion == 5023){
-            int menuNuevo;
+        do {
+            System.out.println("");
             System.out.println("Solo porporcionamos respuetas automaticas en este chat.");
+            System.out.println("");
             System.out.println(" -------- Bienvenido al menu de tickets --------");
-            System.out.println("1 --> Recuperacion de credenciales.");
+            System.out.println("1 --> Olvide mi contraseña.");
             System.out.println("2 --> Solicitudes de instalación de equipos y software.");
-            System.out.println("3 --> Solicitud administrativas ");
+            System.out.println("3 --> Solicitud administrativas.");
+            System.out.println("4 --> Salir.");
             System.out.print("Por favor ingrese el numero de la opcion que desea solucinar: ");
             menuNuevo = opcionMuevoMenu.nextInt();
-            do {
-                switch (menuNuevo) {
-                    case 1 ->{
-                        System.out.print("5011");
-                        seleccion.recuperacion();
-                        break;
-                    }
-                    case 2 ->{
-                        seleccion.instalación();
-                        break;
-                    }
-                    case 3 -> {
-                        seleccion.administrativa();
-                        break;
-                    }
-                    default ->{
-                        System.out.println("La opcion que ingreso es invalida");
-                    }
+            
+            switch (menuNuevo) {
+                case 1 ->{
+                    System.out.println("5011 ");
+                    System.out.println("");
+                    seleccion.recuperacion();
+                    break;
                 }
-            } while (menuNuevo != 3);
-        }else{
-            System.out.println("Numero no corresponde al procedimeinto que se desea realizar");
-        }
+                case 2 ->{
+                    seleccion.instalación();
+                    break;
+                }
+                case 3 -> {
+                    seleccion.administrativa();
+                    break;
+                }
+                case 4 ->{
+                    System.out.println("Regresando al menu de inicio de seccion...");
+                    break;
+                }
+                default ->{
+                    System.out.println("La opcion que ingreso es invalida");
+                }
+            }
+        } while (menuNuevo != 4);
     }
 }

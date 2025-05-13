@@ -8,6 +8,7 @@ public class ADMInistrativa {
         System.out.println("Ingrese el numero que se le porporciono para confimar la opcion que desea realizar");
         confirmacion =  automatico.nextInt();
         if(confirmacion == 810){
+            System.out.println("");
            // Eperando la respuesta autmatica de los compañeros
         }else{
             System.out.println("Numero no corresponde al procedimeinto que se desea realizar");
@@ -19,6 +20,7 @@ public class ADMInistrativa {
         int confirmacion;
         System.out.println("Ingrese el numero que se le porporciono para confimar la opcion que desea realizar");
         confirmacion =  automatico.nextInt();
+        System.out.println("");
         if(confirmacion == 2001){
            // Eperando la respuesta autmatica de los compañeros
         }else{
