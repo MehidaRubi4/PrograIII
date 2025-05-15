@@ -5,9 +5,9 @@ public class ObjetoMenuInicioSeccion {
     public void CorreoElectronico(){
         System.out.println("Colocar los comandos para el inicio de secion por correo electronico");
     }
+
+
     // Parte que trabaja Rubi
-
-
     public void ChatTexto (){
         Scanner automatico = new Scanner(System.in);
         int confirmacion;
