@@ -1,6 +1,6 @@
 public class SolicitudInstalacion {
 
-     private int ticket;
+    private int ticket;
     private String descripcion;
     private String respuestaAutomatica;
 
