@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class ObjetoMenuInicioSeccion {
     // PARTE QUE TRANAJA JOEL
     public void CorreoElectronico(){
-        System.out.println("Colocar los comandos para el inicio de secion por correo electronico");
-          inicioCorreo user = new inicioCorreo();
+    //    System.out.println("Colocar los comandos para el inicio de secion por correo electronico");
+    inicioCorreo user = new inicioCorreo();
       Scanner var2 = new Scanner(System.in);
       System.out.println("······ Bienvenido a Carmesi DigitalTech ······ ");
       System.out.println("----------------------------------------------- ");
