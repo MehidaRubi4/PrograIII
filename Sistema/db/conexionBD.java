@@ -4,8 +4,8 @@ import java.sql.SQLException;
 
 public class ConexionBD {
     private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=sistema_tickets;encrypt=true;trustServerCertificate=true";
-    private static final String USUARIO = "sa";
-    private static final String PASSWORD = "tu_contraseña";
+    private static final String USUARIO = "usuario";
+    private static final String PASSWORD = "contraseña";
     
     public static Connection obtenerConexion() throws SQLException {
         try {
