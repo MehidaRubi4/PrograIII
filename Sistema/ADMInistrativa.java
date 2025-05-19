@@ -6,7 +6,7 @@ public class ADMInistrativa {
     private PilaSolcitudes pilaSolicitudes;
     
     public ADMInistrativa(){ 
-        pilaSolicitudes = new PilaSolicitudes(); //Inicializa PilaSolicitudes como una nueva instancia de PilaSolicitudes
+        pilaSolicitudes = new PilaSolicitudes();      //Inicializa PilaSolicitudes como una nueva instancia de PilaSolicitudes
     }
     
     public void vacaciones(){
@@ -23,7 +23,7 @@ public class ADMInistrativa {
             // Solicitar información para la solicitud de vacaciones
             System.out.println ("---Solicitud de Vacaciones");
             
-            System.out.printl (" Fecha de Inicio (DD/MM/AAAA): ");
+            System.out.println (" Fecha de Inicio (DD/MM/AAAA): ");
             String fechaInicio = automatico.nextLine();
 
             System.out.println ("Fecha de Finalización (DD/MM/AAAA): ");
