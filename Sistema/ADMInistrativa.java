@@ -61,9 +61,49 @@ public class ADMInistrativa {
         int confirmacion;
         System.out.println("Ingrese el numero que se le porporciono para confimar la opcion que desea realizar");
         confirmacion =  automatico.nextInt();
-        System.out.println("");
-        if(confirmacion == 2001){
+        automatico.nextLine();
+        
+        if(confirmacion == 812){
+            System.out.println("");
+            
            // Eperando la respuesta autmatica de los compañeros
+            // Spolicitud de información para justificación de aucencuas
+
+            System.out.println("--- Justificación de Ausencia ---");
+            System.out.print("Fecha de la ausencia (DD/MM/AAAA): ");
+            String fechaAusencia = automatico.nextLine();
+            
+            System.out.print("Motivo: ");
+            String motivo = automatico.nextLine();
+            
+            System.out.print("¿Tiene documento justificativo? (S/N): ");
+            String tieneDocumento = automatico.nextLine();
+
+            // eespuesta automática
+            String respuesta = "Su justificación de ausencia para el día " + fechaAusencia + 
+                              " ha sido registrada.\n" +
+                              "Motivo: " + motivo + "\n";
+            
+            if (tieneDocumento.equalsIgnoreCase("S")) {
+                respuesta += "Por favor, envíe el documento justificativo a rrhh@carmesi.com\n";
+            }
+            
+            respuesta += "Estado: Pendiente de revisión\n" +
+                        "Su justificación será revisada por su supervisor en las próximas n horas.";
+
+            // Crear y almacenar la solicitud
+            SolicitudAdministrativa solicitud = new SolicitudAdministrativa(
+                812, "Ausencia", fechaAusencia, "", motivo, "Pendiente", respuesta
+            );
+            
+            pilaSolicitudes.agregarSolicitud(solicitud);
+
+            // mustra la respuesta automática
+            System.out.println("\n--- Respuesta Automática ---");
+            System.out.println(respuesta);
+            System.out.println("\nSolicitudes pendientes en el sistema: " + 
+                              pilaSolicitudes.cantidadSolicitudesPendientes());
+            
         }else{
             System.out.println("Numero no corresponde al procedimeinto que se desea realizar");
         }
