@@ -1,6 +1,6 @@
 //Clase para representar una solicitud Administrativa (vacaciones o ausencias)
 
-public Class SolicitudAdministrativa {
+public class SolicitudAdministrativa{
   private int ticket;
   private String tipo;         // Vacaciones o Ausencias
   private String fechaInicio;
@@ -28,7 +28,7 @@ public Class SolicitudAdministrativa {
 }
 
 // Clase para gestionar las pilas de solicitudes
-public Class PilaSolicitudes {
+public class PilaSolicitudes{
   private java.util.Stack<SolicitudAdministrativa> solicitudes;
 
   public PilaSolicitudes () {
@@ -43,7 +43,7 @@ public Class PilaSolicitudes {
   // Métpdo para procesar la solicitud más reciente
   public SolicitudAdministrativa procesarSolicitudReciente () {
       if (!solicitudes.isEmpty()){
-        return solicitudes.pop;
+        return solicitudes.pop();
       }
     return null;
   }
