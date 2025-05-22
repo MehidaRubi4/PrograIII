@@ -1,68 +1,96 @@
-//Clase para representar una solicitud Administrativa (vacaciones o ausencias)
+public class SolicitudAdministrativa {
+    private int ticket;
+    private String descripcion;
+    private String respuestaAutomatica;
+    private String fechaInicio;
+    private String fechaFin;
+    private String fechaAusencia;
+    private String motivo;
+    private String estado;
 
-public class SolicitudAdministrativa{
-  private int ticket;
-  private String tipo;         // Vacaciones o Ausencias
-  private String fechaInicio;
-  private String fechaFin;     // Solo para las vacaciines
-  private String motivo;
-  private String estado;       // estados: Pediente, Aprobada, Rechazada
-  private String respuestaAutomatica;
+    // Constructor para vacaciones
+    public SolicitudAdministrativa(int ticket, String descripcion, String respuestaAutomatica, 
+                               String fechaInicio, String fechaFin, String motivo) {
+        this.ticket = ticket;
+        this.descripcion = descripcion;
+        this.respuestaAutomatica = respuestaAutomatica;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.motivo = motivo;
+        this.estado = "Pendiente";
+    }
 
-  // Método para validad el Ticket
-  public boolean validarTicket(int ticketIngresado){
-    return this.ticket == ticketIngresado;
-  }
+    // Constructor para ausencias
+    public SolicitudAdministrativa(int ticket, String descripcion, String respuestaAutomatica, 
+                               String fechaAusencia, String motivo) {
+        this.ticket = ticket;
+        this.descripcion = descripcion;
+        this.respuestaAutomatica = respuestaAutomatica;
+        this.fechaAusencia = fechaAusencia;
+        this.motivo = motivo;
+        this.estado = "Pendiente";
+    }
 
-  // Método para mostrar la información de la solicitud
-  public void mostrarInfo () {
-    System.out.println ("Has seleccionado : " + tipo);
-  }
+    // Getters
+    public int getTicket() {
+        return ticket;
+    }
 
-  // Método para mostrar la respuesta automática
-  public void mostrarRespuesta () {
-    System.out.println ("Ticket confirmado: " + ticket);
-    System.out.println ("Respuesta automática del equipo: ");
-    System.out.println (respuestaAutomatica);
-  } 
-}
+    public String getDescripcion() {
+        return descripcion;
+    }
 
-// Clase para gestionar las pilas de solicitudes
-public class PilaSolicitudes{
-  private java.util.Stack<SolicitudAdministrativa> solicitudes;
+    public String getRespuestaAutomatica() {
+        return respuestaAutomatica;
+    }
 
-  public PilaSolicitudes () {
-    solicitudes = new java.util.Stack<> ();
-  }
+    public String getFechaInicio() {
+        return fechaInicio;
+    }
 
-  // Método para agregar una solicitud a la pila
-  public void agregarSolicitud(SolicitudAdministrativa solicitud){
-    solicitudes.push(solicitud);
-  }
+    public String getFechaFin() {
+        return fechaFin;
+    }
 
-  // Métpdo para procesar la solicitud más reciente
-  public SolicitudAdministrativa procesarSolicitudReciente () {
-      if (!solicitudes.isEmpty()){
-        return solicitudes.pop();
-      }
-    return null;
-  }
+    public String getFechaAusencia() {
+        return fechaAusencia;
+    }
 
-  // Método para ver la solicitud más reciente sin eliminarla
-  public SolicitudAdministrativa verSolicitudReciente() {
-      if (!solicitudes.isEmpty()) {
-        return solicitudes.peek();
-      }
-    return null;
-  }
+    public String getMotivo() {
+        return motivo;
+    }
 
-  // Método para verificar si hay solicitudes pendientes
-  public boolean haySolicitudesPendientes() {
-    return !solicitudes.isEmpty();
-  }
+    public String getEstado() {
+        return estado;
+    }
 
-  // Método para obtener el número de solicitudes pendientes
-  public int cantidadSolicitudesPendientes() {
-    return solicitudes.size();
-  }
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    // Validar ticket
+    public boolean validarTicket(int ticketIngresado) {
+        return this.ticket == ticketIngresado;
+    }
+
+    // Mostrar información
+    public void mostrarInfo() {
+        System.out.println("Has seleccionado: " + descripcion);
+        
+        if (ticket == 810) {
+            System.out.println("Fechas: " + fechaInicio + " hasta " + fechaFin);
+        } else if (ticket == 812) {
+            System.out.println("Fecha de ausencia: " + fechaAusencia);
+        }
+        
+        System.out.println("Motivo: " + motivo);
+        System.out.println("Estado: " + estado);
+    }
+
+    // Mostrar respuesta automática
+    public void mostrarRespuesta() {
+        System.out.println("Ticket confirmado: " + ticket);
+        System.out.println("Respuesta automatica del equipo:");
+        System.out.println(respuestaAutomatica);
+    }
 }
