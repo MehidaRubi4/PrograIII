@@ -1,8 +1,10 @@
+package db;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConexionBD {
+public class conexionBD {
     private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=sistema_tickets;encrypt=true;trustServerCertificate=true";
     private static final String USUARIO = "usuario";
     private static final String PASSWORD = "contraseña";
