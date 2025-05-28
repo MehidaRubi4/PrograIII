@@ -79,9 +79,7 @@ public class SistemaInstalacion {
                     System.out.println("Número de ticket incorrecto.");
                 }
             }
-
         } while (opcion != 5);
-
         scanner.close();
     }
 }

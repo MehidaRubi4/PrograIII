@@ -1,15 +1,12 @@
 import java.util.Scanner;
 
 public class Tickets {
-    
     public static void main(String[] args) {
-        // Inicio de seccion
         ObjetoMenuInicioSeccion seleccion = new ObjetoMenuInicioSeccion();
         Scanner Teclado = new Scanner(System.in);
         int opcion;
-
+        //Menu de los dos tipos de inicio de seccion
         do {
-         //Menu de los dos tipos de inicio de seccion
             System.out.println("······ Bienvenido a Carmesi DigitalTech ······ ");
             System.out.println("----------------------------------------------- ");
             System.out.println("            Menu de inicio de seccion           ");

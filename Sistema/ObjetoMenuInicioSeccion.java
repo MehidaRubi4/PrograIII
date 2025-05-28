@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
 public class ObjetoMenuInicioSeccion {
-    // PARTE QUE TRANAJA JOEL
     public void CorreoElectronico(){
-    //    System.out.println("Colocar los comandos para el inicio de secion por correo electronico");
     inicioCorreo user = new inicioCorreo();
       Scanner var2 = new Scanner(System.in);
       System.out.println("······ Bienvenido a Carmesi DigitalTech ······ ");
@@ -25,8 +23,6 @@ public class ObjetoMenuInicioSeccion {
          }
     }
 
-
-    // Parte que trabaja Rubi
     public void ChatTexto (){
         Scanner automatico = new Scanner(System.in);
         int confirmacion;
@@ -37,10 +33,11 @@ public class ObjetoMenuInicioSeccion {
             ObjetoMenuTickets seleccion = new ObjetoMenuTickets();
             Scanner opcionMuevoMenu =  new Scanner(System.in); 
             int menuNuevo;
-
-            do {
-                System.out.println("");
-                System.out.println("Solo porporcionamos respuetas automaticas en este chat.");
+            
+            System.out.println("");
+            System.out.println("Solo porporcionamos respuetas automaticas en este chat.");
+        
+            do {        
                 System.out.println("");
                 System.out.println(" -------- Bienvenido al menu de tickets --------");
                 System.out.println("1 --> Olvide mi contraseña.");
