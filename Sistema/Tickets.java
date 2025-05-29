@@ -5,7 +5,7 @@ public class Tickets {
         ObjetoMenuInicioSeccion seleccion = new ObjetoMenuInicioSeccion();
         Scanner Teclado = new Scanner(System.in);
         int opcion;
-        //Menu de los dos tipos de inicio de seccion
+        
         do {
             System.out.println("······ Bienvenido a Carmesi DigitalTech ······ ");
             System.out.println("----------------------------------------------- ");
@@ -29,6 +29,7 @@ public class Tickets {
                     break;
                 }
                 case 3 -> {
+                    System.out.println("Saliendo del programa...");
                     break;
                 }
                 default ->{

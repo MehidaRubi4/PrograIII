@@ -1,5 +1,5 @@
 import java.util.Scanner;
-// Menu de chat de texto
+
 public class ObjetoMenuTickets {
     public void recuperacion(){
         Scanner automatico = new Scanner(System.in);
@@ -69,40 +69,38 @@ public class ObjetoMenuTickets {
         ADMInistrativa sonywc = new ADMInistrativa();
         Scanner solicitd = new Scanner(System.in);
         int comporba; 
-
-            do {
-                System.out.println("");
-                System.out.println(" ++++++++ Menu de solicitudes administrativas ++++++++ ");
-                System.out.println("1 --> Solicitud de vacaciones.");
-                System.out.println("2 --> Justuficacion de ausencia.");
-                System.out.println("3 --> Salir.");
-                System.out.println("");
-                System.out.print("Por favor ingrese el numero de la opcion que desea solucinar: ");
-                comporba = solicitd.nextInt();
-            
-                switch (comporba) {
-                    case 1->{
-                        System.out.println("810");
-                        System.out.println("");
-                        sonywc.vacaciones();
-                        break;
-                    }
-                    case 2 ->
-                    {
-                        System.out.println("812");
-                        System.out.println("");
-                        sonywc.asusencias();
-                        break;
-                    }
-                    case 3 ->{
-                        System.out.println("Regresando al menu de tickets..");
-                        break;
-                    }
-                    default -> {
-                        System.out.println("La opcion que ingreso es invalida");
-                    }
+        do {
+            System.out.println("");
+            System.out.println(" ++++++++ Menu de solicitudes administrativas ++++++++ ");
+            System.out.println("1 --> Solicitud de vacaciones.");
+            System.out.println("2 --> Justuficacion de ausencia.");
+            System.out.println("3 --> Salir.");
+            System.out.println("");
+            System.out.print("Por favor ingrese el numero de la opcion que desea solucinar: ");
+            comporba = solicitd.nextInt();
+        
+            switch (comporba) {
+                case 1->{
+                    System.out.println("810");
+                    System.out.println("");
+                    sonywc.vacaciones();
+                    break;
                 }
-            } while (comporba != 3);
+                case 2 ->
+                {
+                    System.out.println("812");
+                    System.out.println("");
+                    sonywc.asusencias();
+                    break;
+                }
+                case 3 ->{
+                    System.out.println("Regresando al menu de tickets..");
+                    break;
+                }
+                default -> {
+                    System.out.println("La opcion que ingreso es invalida");
+                }
+            }
+        } while (comporba != 3);
     }
-
 }

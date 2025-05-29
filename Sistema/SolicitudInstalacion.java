@@ -1,9 +1,7 @@
 public class SolicitudInstalacion {
-
     private int ticket;
     private String descripcion;
     private String respuestaAutomatica;
-
 
     public SolicitudInstalacion(int ticket, String descripcion, String respuestaAutomatica) {
         this.ticket = ticket;
@@ -27,11 +25,9 @@ public class SolicitudInstalacion {
         return this.ticket == ticketIngresado;
     }
 
-
     public void mostrarInfo() {
         System.out.println("Has seleccionado: " + descripcion);
     }
-
 
     public void mostrarRespuesta() {
         System.out.println(" Ticket confirmado: " + ticket);
@@ -39,4 +35,3 @@ public class SolicitudInstalacion {
         System.out.println(respuestaAutomatica);
     }
 }
-

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class SistemaInstalacion {
-    public void MenudeCorreoelectronici(){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion;
         do {
@@ -81,4 +81,3 @@ public class SistemaInstalacion {
         scanner.close();
     }    
 }
-
