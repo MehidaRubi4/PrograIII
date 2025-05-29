@@ -19,6 +19,7 @@ public class ObjetoMenuInicioSeccion {
 
             case "Hola":
                System.out.println("5023 ");
+               
                //user.ChatTexto(); ingresa el usuario
          }
     }

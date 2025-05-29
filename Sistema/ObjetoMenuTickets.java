@@ -9,7 +9,7 @@ public class ObjetoMenuTickets {
         if(confirmacion == 5011){
             System.out.println("");
             System.out.println("Paso 1: Para recuperar su contraseña de correo, primero debe iniciar sesión.");
-            System.out.println("Paso 2: Luego, seleccione la opción 'Olvidé mi contraseña'.");
+            System.out.println("Paso 2: Luego, escriba 1 para activar la opcion de olvido mi contraseña.'.");
             System.out.println("Paso 3: Se le enviará un código de verificación a su correo electrónico.");
             System.out.println("Paso 4: Ingrese ese código en el campo indicado para continuar con la recuperación de su contraseña.");
         }else{

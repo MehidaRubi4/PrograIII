@@ -1,11 +1,9 @@
 import java.util.Scanner;
 
 public class SistemaInstalacion {
-    public static void main(String[] args) {
+    public void MenudeCorreoelectronici(){
         Scanner scanner = new Scanner(System.in);
-
         int opcion;
-
         do {
             System.out.println("\n=== SISTEMA DE INSTALACION ===");
             System.out.println("1. Solicitar instalacion de impresora");
@@ -81,5 +79,6 @@ public class SistemaInstalacion {
             }
         } while (opcion != 5);
         scanner.close();
-    }
+    }    
 }
+
