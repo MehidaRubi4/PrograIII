@@ -24,14 +24,8 @@ public class inicioCorreo {
             if (code1 == 8080)
             System.out.println("Escriba su nueva contrasenia");
 
-
             else{
                 System.out.println("codigo invalido");
-
         }
-
-
     }
-
-
 }
