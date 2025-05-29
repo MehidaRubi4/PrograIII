@@ -2,28 +2,61 @@ import java.util.Scanner;
 
 public class ObjetoMenuInicioSeccion {
     public void CorreoElectronico(){
-    inicioCorreo user = new inicioCorreo();
-      Scanner var2 = new Scanner(System.in);
-      System.out.println("······ Bienvenido a Carmesi DigitalTech ······ ");
-      System.out.println("----------------------------------------------- ");
-      System.out.println("        Ingrese correo electronico de usuario       ");
-      String user1 = var2.nextLine();
-      System.out.println("        Ingrese contrasenia o ingrese 1 si olvido la contrasenia      ");
-      String contra = var2.nextLine();  
+        Scanner scanner =  new Scanner(System.in);
+        String correo, contraseña;
+        
+        System.out.println(" -------- Inicio de seccion por correo electronico --------");
+        System.out.println("Ingrese su correo: ");
+        correo = scanner.nextLine();
+        System.out.println("Ingrese su contraseña: ");
+        contraseña = scanner.nextLine();
 
-         switch (contra) {
+        if(validar(correo, contraseña)){
+            System.out.println("Inicio de seccion exitosa...");
+            Scanner menun = new Scanner(System.in);
+            int opcion;
+            SistemaInstalacion corresponde = new SistemaInstalacion();
+            do {
+                System.out.println(" -------- Bienvenido a Carmesi DigitalTech ······ ");
+                System.out.println("----------------------------------------------- ");
+                System.out.println("1 --> Solicitudes de instalación de equipos y software.");
+                System.out.println("2 --> Solicitud administrativas.");
+                System.out.println("3 --> Salir.");
+                System.out.print("Por favor ingrese el numero que desee realizar: ");
+                opcion = menun.nextInt();
 
-            case "1":
-               user.correoPerdido();
-               break;
-
-            case "Hola":
-               System.out.println("5023 ");
-               
-               //user.ChatTexto(); ingresa el usuario
-         }
+                switch (opcion) {
+                    case 1 ->{
+                        corresponde.MenudeCorreoelectronici();
+                        break;
+                    }
+                    default ->{
+                        System.out.println("La opcion es invalida");
+                    }
+                }
+            } while (opcion != 3);
+        } else{
+            System.out.println("Contraseña o correo incorrectos, intente de nuevo...");
+        }
     }
 
+    // area que pertenece a inicio de seccion por correo
+    private boolean validar(String correo, String contraseña){
+        if (!esEmailValido(correo)) {
+        System.out.println("Correo inválido.");
+        return false;
+        }
+
+        if(contraseña == null || contraseña.length() <15 ){
+            System.out.println("Contraseña invalida");
+        }
+        return true;
+    }
+
+    private boolean esEmailValido(String correo){
+        return correo != null  && correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
+    }
+        
     public void ChatTexto (){
         Scanner automatico = new Scanner(System.in);
         int confirmacion;

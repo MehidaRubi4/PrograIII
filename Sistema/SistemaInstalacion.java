@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class SistemaInstalacion {
-    public static void main(String[] args) {
+    public void MenudeCorreoelectronici(){
         Scanner scanner = new Scanner(System.in);
         int opcion;
         do {
@@ -17,22 +17,23 @@ public class SistemaInstalacion {
             SolicitudInstalacion solicitudSeleccionada = null;
 
             switch (opcion) {
-                case 1 -> solicitudSeleccionada = new SolicitudInstalacion(
-                    ContadorTickets.generarNuevoTicket(),
+                case 1 ->{
+                    solicitudSeleccionada = new SolicitudInstalacion(ContadorTickets.generarNuevoTicket(),
                     "Instalacion de una impresora",
-                    "La instalacion de la impresora está en proceso. Uno de nuestros técnicos lo contactará pronto."
-                );
-                case 2 -> solicitudSeleccionada = new SolicitudInstalacion(
-                    ContadorTickets.generarNuevoTicket(),
+                    "La instalacion de la impresora está en proceso. Uno de nuestros técnicos lo contactará pronto.");
+                    break;
+                }
+                case 2 ->{
+                    solicitudSeleccionada = new SolicitudInstalacion(ContadorTickets.generarNuevoTicket(),
                     "Instalacion de un router",
-                    "La instalación del router ha sido agendada. Un técnico asignado visitará su área hoy."
-                );
-                case 3 -> solicitudSeleccionada = new SolicitudInstalacion(
-                    ContadorTickets.generarNuevoTicket(),
+                    "La instalación del router ha sido agendada. Un técnico asignado visitará su área hoy.");
+                }
+                case 3 ->{
+                    solicitudSeleccionada = new SolicitudInstalacion(ContadorTickets.generarNuevoTicket(),
                     "Instalación de un software",
-                    "El software solicitado será instalado de forma remota en los próximos 30 minutos."
-                );
-                case 4 -> {
+                    "El software solicitado será instalado de forma remota en los próximos 30 minutos.");
+                }
+                case 4 ->{
                     System.out.println("\nRedirigiendo al menú de tickets...");
                     ObjetoMenuTickets menu = new ObjetoMenuTickets();
                     int subopcion;
@@ -53,18 +54,17 @@ public class SistemaInstalacion {
                             default -> System.out.println("Opción inválida");
                         }
                     } while (subopcion != 4);
-                    continue; // vuelve al menú principal
+                    continue;
                 }
-                case 5 -> {
+                case 5 ->{
                     System.out.println("Saliendo completamente del sistema.");
                     break;
                 }
-                default -> {
+                default ->{
                     System.out.println("Opción no válida.");
                     continue;
                 }
             }
-
             if (solicitudSeleccionada != null) {
                 solicitudSeleccionada.mostrarInfo();
                 System.out.println("Su número de ticket es: " + solicitudSeleccionada.getTicket());
