@@ -30,14 +30,34 @@ public class ObjetoMenuInicioSeccion {
                         corresponde.MenudeCorreoelectronici();
                         break;
                     }
+                    case 2 ->{
+                        //"2 --> Solicitud administrativas.");
+                        System.out.println("podrian colocar la conexio que con tanto me ando confundiendo");
+                        break;
+                    }
+                    case 3 ->{
+                        System.out.println("Cerrando sesión...");
+                    }
                     default ->{
-                        System.out.println("La opcion es invalida");
+                        System.out.println("Opcion invalida");
                     }
                 }
             } while (opcion != 3);
         } else{
+            Scanner olvido = new Scanner(System.in);
+            String respueta;
             System.out.println("Contraseña o correo incorrectos, intente de nuevo...");
-        }
+            System.out.println("¿Olvido la contraseña? (s/n)");
+            respueta = olvido.nextLine().toLowerCase().trim();
+            if (respueta.equals("s") || respueta.equals("si")) {       
+                recuperarContraseña(correo);             
+            }
+        }    
+    }
+    
+    private void recuperarContraseña(String correo){
+        Scanner scanner =  new Scanner(System.in);
+        System.out.println(" -/- -/- -/- Recuperacion de contraseña -/- -/ -/- ");        
     }
 
     // area que pertenece a inicio de seccion por correo
