@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class ObjetoMenuInicioSeccion {
     public void CorreoElectronico(){
@@ -57,10 +58,49 @@ public class ObjetoMenuInicioSeccion {
     
     private void recuperarContraseña(String correo){
         Scanner scanner =  new Scanner(System.in);
-        System.out.println(" -/- -/- -/- Recuperacion de contraseña -/- -/ -/- ");        
+        System.out.println(" -/- -/- -/- Recuperacion de contraseña -/- -/ -/- ");
+        
+        if(correo == null || correo.trim().isEmpty()){
+            System.out.println("Ingrese su correo electronico: ");
+            correo = scanner.nextLine();
+        }
+
+        if(esCorreoValido(correo)){
+            int codigorecuperacion  = generarCodigoRe();
+            System.out.println("Se ha enviado un codigo de recuperacion al correo: "+ correo);
+            System.out.println("Codigo de recuperacion: " + codigorecuperacion);
+            System.out.println("Ingrese el codigo de recuperación: ");
+            int codigoIngresp = scanner.nextInt();
+            scanner.nextLine();
+
+            if(codigoIngresp == codigorecuperacion){
+                System.out.println("Ingrese su nueva contraseña: ");
+                String nuevaContraseña = scanner.nextLine();
+
+                if(nuevaContraseña.length() >=15){
+                    System.out.println("Contraseña actualizada exitosamente.");
+                    System.out.println("Puede intentar inicar sesión nuevamente");
+                } else{
+                    System.out.println("Contraseña no adecuada, debe tener almenos 15 caracteres");
+                }
+            } else{
+                System.out.println("Codigo de recuperacion incorrecto...");
+            }
+        }else{
+            System.out.println("Formato de corre no es valido.");
+        }
     }
 
-    // area que pertenece a inicio de seccion por correo
+    private boolean esCorreoValido(String correo){
+        return correo != null && 
+        correo.contains("@") && correo.contains(".") && 
+        correo.indexOf("@") > 0 && correo.indexOf(".") > correo.indexOf("@"); 
+    }
+
+    private int generarCodigoRe(){
+        return (int)(Math.random() * 9000) + 1000; // Codigo de 4 digitos.
+    }
+
     private boolean validar(String correo, String contraseña){
         if (!esEmailValido(correo)) {
         System.out.println("Correo inválido.");
